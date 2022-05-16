@@ -1,0 +1,251 @@
+@import "variables";
+@import "media-queries";
+
+/* FRONTDEV MENTOR BASE CSS */
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+}
+
+/* RESET */
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   /* font */
+   font-family: "Josefin Sans", sans-serif;
+}
+
+/* STYLE */
+
+body {
+   margin: 0 auto;
+   padding: 0;
+   font-size: 1rem;
+   max-height: 100vh;
+   max-width: 1440px;
+
+   @include xs {
+      background: var(--background-mobile);
+   }
+}
+
+.container {
+   display: flex;
+   flex-flow: row;
+   @include xs {
+      flex-flow: column nowrap;
+   }
+}
+
+// left part
+.left-container {
+   display: flex;
+   flex-flow: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   padding: 50px 160px;
+   background-image: url("/images/bg-pattern-desktop.svg");
+   background-repeat: no-repeat;
+   @include md {
+      padding: 50px 50px;
+      align-items: center;
+   }
+   @include sm {
+      padding: 50px 10px;
+      align-items: center;
+   }
+   @include xs {
+      padding: 0;
+      margin: 0;
+      justify-content: flex-start;
+      align-items: center;
+      background: transparent;
+   }
+
+   // logo
+
+   .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include xs {
+         margin: 10px 20px;
+         align-self: flex-start;
+      }
+      svg {
+         @include xs {
+            transform: scale(0.7);
+         }
+      }
+   }
+
+   // title
+
+   h1 {
+      margin-top: 100px;
+      font-size: 4rem;
+      letter-spacing: 0.8rem;
+      line-height: 1.15;
+      font-weight: 600;
+      color: var(--dark-gray-red);
+      span {
+         font-weight: 300;
+         color: var(--primary-red);
+      }
+      @include xs {
+         margin: 50px 0 10px 0;
+         font-size: 2.4rem;
+         text-align: center;
+      }
+   }
+
+   // paragraph
+   p {
+      font-size: 1rem;
+      color: var(--primary-red);
+      line-height: 1.8;
+      letter-spacing: 1px;
+      margin: 30px 0;
+      @include xs {
+         margin: 10px 40px;
+         letter-spacing: 0.5px;
+         font-size: 0.8rem;
+         text-align: center;
+      }
+   }
+
+   // email input
+   .mail {
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      border-radius: 40px;
+      margin-top: 20px;
+      height: 56px;
+      border: 1px solid var(--lg-one);
+      @include xs {
+         margin: 30px 40px;
+         width: 80%;
+      }
+      // sizing for error icon
+      .error-img {
+         flex-basis: 24px;
+         width: 24px;
+         height: 24px;
+         align-self: center;
+         justify-self: center;
+         margin: 0 10px;
+         @include xs {
+            margin: 0;
+         }
+      }
+      ::placeholder {
+         opacity: 0.5;
+      }
+      input {
+         flex-basis: 65%;
+         outline-style: none;
+         border: none;
+         border-radius: 20px;
+         margin: 0 10px;
+         padding: 0px 20px;
+         font-size: 1.2rem;
+         opacity: 1;
+         &[type="email"] {
+            color: var(--dark-gray-red);
+            background: transparent;
+         }
+         @include md {
+            font-size: 1rem;
+            padding: 10px 0;
+            margin: 15px;
+            flex-basis: 60%;
+         }
+         @include sm {
+            font-size: 1rem;
+            padding: 10px 0;
+            margin: 15px;
+            flex-basis: 60%;
+         }
+         @include xs {
+            font-size: 0.9rem;
+            padding: 10px 0;
+            margin: 15px;
+            flex-basis: 55%;
+         }
+      }
+      button {
+         position: absolute;
+         right: -3px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border: 0;
+         border-radius: 30px;
+         width: 90px;
+         height: 56px;
+         transition: box-shadow 0.2s;
+         box-shadow: var(--box-shadow);
+         cursor: pointer;
+         background: linear-gradient(135deg, var(--lg-one), var(--lg-two));
+         &:hover {
+            box-shadow: var(--box-shadow-hover);
+            background: linear-gradient(135deg, var(--lg-one-hover), var(--lg-two-hover));
+         }
+         @include xs {
+            width: 70px;
+         }
+      }
+   }
+   .error {
+      border: 2px solid var(--error);
+   }
+   .msg {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 15px 30px;
+      &-error {
+         color: var(--error);
+      }
+      &-sucess {
+         color: var(--primary-red);
+      }
+   }
+}
+
+// images
+.right-img {
+   @include xs {
+      display: none;
+   }
+}
+.mobile-img {
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   display: none;
+   @include xs {
+      display: block;
+      margin-top: 30px;
+   }
+   img {
+      width: 100%;
+   }
+}
+
+//footer
+footer {
+   align-self: center;
+   @include xs {
+      padding-top: 100px;
+   }
+}

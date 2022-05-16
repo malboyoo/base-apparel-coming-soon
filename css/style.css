@@ -1,0 +1,285 @@
+:root {
+  --primary-red: hsl(0, 36%, 70%);
+  --primary-softred: hsl(0, 93%, 68%);
+  --dark-gray-red: hsl(0, 6%, 24%);
+  --lg-one: #f8c3c4;
+  --lg-two: #e99090;
+  --lg-one-hover: #fcdbdc;
+  --lg-two-hover: #f8c7c8;
+  --border: #ddd1d3;
+  --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+  --box-shadow-hover: 0 15px 20px rgba(0, 0, 0, 0.25);
+  --error: #ee5f60;
+  --background-mobile: #fefaf9;
+}
+
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
+/* FRONTDEV MENTOR BASE CSS */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font */
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* STYLE */
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1rem;
+  max-height: 100vh;
+  max-width: 1440px;
+}
+@media (max-width: 850px) {
+  body {
+    background: var(--background-mobile);
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+}
+@media (max-width: 850px) {
+  .container {
+    flex-flow: column nowrap;
+  }
+}
+
+.left-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px 160px;
+  background-image: url("/images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .left-container {
+    padding: 50px 50px;
+    align-items: center;
+  }
+}
+@media (min-width: 850px) and (max-width: 1000px) {
+  .left-container {
+    padding: 50px 10px;
+    align-items: center;
+  }
+}
+@media (max-width: 850px) {
+  .left-container {
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+  }
+}
+.left-container .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 850px) {
+  .left-container .logo {
+    margin: 10px 20px;
+    align-self: flex-start;
+  }
+}
+@media (max-width: 850px) {
+  .left-container .logo svg {
+    transform: scale(0.7);
+  }
+}
+.left-container h1 {
+  margin-top: 100px;
+  font-size: 4rem;
+  letter-spacing: 0.8rem;
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--dark-gray-red);
+}
+.left-container h1 span {
+  font-weight: 300;
+  color: var(--primary-red);
+}
+@media (max-width: 850px) {
+  .left-container h1 {
+    margin: 50px 0 10px 0;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+.left-container p {
+  font-size: 1rem;
+  color: var(--primary-red);
+  line-height: 1.8;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+@media (max-width: 850px) {
+  .left-container p {
+    margin: 10px 40px;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+.left-container .mail {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-radius: 40px;
+  margin-top: 20px;
+  height: 56px;
+  border: 1px solid var(--lg-one);
+}
+@media (max-width: 850px) {
+  .left-container .mail {
+    margin: 30px 40px;
+    width: 80%;
+  }
+}
+.left-container .mail .error-img {
+  flex-basis: 24px;
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  justify-self: center;
+  margin: 0 10px;
+}
+@media (max-width: 850px) {
+  .left-container .mail .error-img {
+    margin: 0;
+  }
+}
+.left-container .mail ::placeholder {
+  opacity: 0.5;
+}
+.left-container .mail input {
+  flex-basis: 65%;
+  outline-style: none;
+  border: none;
+  border-radius: 20px;
+  margin: 0 10px;
+  padding: 0px 20px;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+.left-container .mail input[type=email] {
+  color: var(--dark-gray-red);
+  background: transparent;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .left-container .mail input {
+    font-size: 1rem;
+    padding: 10px 0;
+    margin: 15px;
+    flex-basis: 60%;
+  }
+}
+@media (min-width: 850px) and (max-width: 1000px) {
+  .left-container .mail input {
+    font-size: 1rem;
+    padding: 10px 0;
+    margin: 15px;
+    flex-basis: 60%;
+  }
+}
+@media (max-width: 850px) {
+  .left-container .mail input {
+    font-size: 0.9rem;
+    padding: 10px 0;
+    margin: 15px;
+    flex-basis: 55%;
+  }
+}
+.left-container .mail button {
+  position: absolute;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 30px;
+  width: 90px;
+  height: 56px;
+  transition: box-shadow 0.2s;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--lg-one), var(--lg-two));
+}
+.left-container .mail button:hover {
+  box-shadow: var(--box-shadow-hover);
+  background: linear-gradient(135deg, var(--lg-one-hover), var(--lg-two-hover));
+}
+@media (max-width: 850px) {
+  .left-container .mail button {
+    width: 70px;
+  }
+}
+.left-container .error {
+  border: 2px solid var(--error);
+}
+.left-container .msg {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 15px 30px;
+}
+.left-container .msg-error {
+  color: var(--error);
+}
+.left-container .msg-sucess {
+  color: var(--primary-red);
+}
+
+@media (max-width: 850px) {
+  .right-img {
+    display: none;
+  }
+}
+
+.mobile-img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+@media (max-width: 850px) {
+  .mobile-img {
+    display: block;
+    margin-top: 30px;
+  }
+}
+.mobile-img img {
+  width: 100%;
+}
+
+footer {
+  align-self: center;
+}
+@media (max-width: 850px) {
+  footer {
+    padding-top: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

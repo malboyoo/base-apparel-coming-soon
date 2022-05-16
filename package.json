@@ -1,0 +1,23 @@
+{
+   "name": "base-apparel-coming-soon-master",
+   "version": "1.0.0",
+   "description": "![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)",
+   "main": "index.js",
+   "scripts": {
+      "sass": "sass -w scss:css"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/malboyoo/base-apparel-coming-soon.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/malboyoo/base-apparel-coming-soon/issues"
+   },
+   "homepage": "https://github.com/malboyoo/base-apparel-coming-soon#readme",
+   "dependencies": {
+      "sass": "^1.51.0"
+   }
+}
