@@ -16,7 +16,7 @@
    <body>
       <div class="container">
          <div class="left-container">
-            <div class="logo">
+            <header class="logo">
                <svg xmlns="http://www.w3.org/2000/svg" width="158" height="33">
                   <defs>
                      <linearGradient id="a" x1="0%" y1="0%" y2="100%">
@@ -37,24 +37,24 @@
                      />
                   </g>
                </svg>
-            </div>
+            </header>
 
-            <div class="mobile-img">
+            <div class="mobile-img" role="mobile-image">
                <img src="images/hero-mobile.jpg" alt="The model" />
             </div>
 
-            <h1 class="coming-soon">
+            <h1 class="coming-soon" role="main-title">
                <span>WE'RE</span> <br />COMING<br />
                SOON
             </h1>
 
-            <p>
+            <p role="main-paragraph">
                Hello fellow shoppers! We're currently building our new fashion store. Add your email
                below to stay up-to-date with announcements and our launch deals.
             </p>
-            <div class="mail">
-               <input type="email" name="email" id="" placeholder="Email Address" />
-               <button class="mail-btn">
+            <div class="mail" role="mail-container">
+               <input type="email" name="email" id="email" placeholder="Email Address" />
+               <button class="mail-btn" aria-label="Subscribe-button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
                      <path
                         fill="none"
@@ -66,7 +66,7 @@
                </button>
             </div>
          </div>
-         <div class="right-img">
+         <div class="right-img" role="hero-image">
             <img src="./images/hero-desktop.jpg" alt="" />
          </div>
       </div>
